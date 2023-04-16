@@ -1,24 +1,18 @@
 package highlycohesivelooselycoupledexample;
 
-public class Elevator implements IElevator {
-
-  private static final int CAPACITY = 1000;
+public abstract class BaseElevator {
 
   private final IFloorSystem elevatorFloorSystem;
+  private final int capacity;
+
 
   private boolean doorOpen = false;
   private boolean stopped = true;
   private int weight = 0;
 
-  public Elevator(IFloorSystem elevatorFloorSystem) {
+  public BaseElevator(IFloorSystem elevatorFloorSystem, int capacity) {
     this.elevatorFloorSystem = elevatorFloorSystem;
-  }
-
-  public void openDoor() {
-    if (stopped) {
-      doorOpen = true;
-    }
-    System.out.println("Door is open.");
+    this.capacity = capacity;
   }
 
   public void go(IFloor floor) {
@@ -37,20 +31,26 @@ public class Elevator implements IElevator {
     System.out.println("Came to the floor: " + elevatorFloorSystem.getCurrentFlow().getFloorNumber());
   }
 
-  private void goUp() {
-    System.out.println("Going to upper floors");
-    elevatorFloorSystem.increaseCurrentFloor();
+  private void stop() {
+    stopped = true;
+    openDoor();
   }
 
-  private void goDown() {
-    System.out.println("Going to lower floors");
-    elevatorFloorSystem.decreaseCurrentFloor();
+  public boolean getDoorStatus() {
+    return doorOpen;
   }
 
+
+  public void openDoor() {
+    if (stopped) {
+      doorOpen = true;
+    }
+    System.out.println("Door is open.");
+  }
 
   public void closeDoor() {
     calculateCapacity();
-    if (weight <= CAPACITY) {
+    if (weight <= capacity) {
       doorOpen = false;
       System.out.println("Door is closed.");
     } else {
@@ -63,14 +63,14 @@ public class Elevator implements IElevator {
     System.out.println("The weight is " + weight);
   }
 
-
-  private void stop() {
-    stopped = true;
-    openDoor();
+  private void goUp() {
+    System.out.println("Going to upper floors");
+    elevatorFloorSystem.increaseCurrentFloor();
   }
 
-  public boolean getDoorStatus() {
-    return doorOpen;
+  private void goDown() {
+    System.out.println("Going to lower floors");
+    elevatorFloorSystem.decreaseCurrentFloor();
   }
 
 }

@@ -47,7 +47,7 @@ public class FiveFloorSystemImpl implements IFloorSystem {
   @Override
   public String toString() {
     String string = null;
-    string = "IElevator: " + getCurrentFlow().getFloorNumber();
+    string = "BaseElevator: " + getCurrentFlow().getFloorNumber();
     return string;
   }
 
