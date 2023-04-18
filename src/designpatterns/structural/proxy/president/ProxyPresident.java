@@ -1,4 +1,4 @@
-package proxy;
+package designpatterns.structural.proxy.president;
 
 public class ProxyPresident implements President {
 
