@@ -2,7 +2,7 @@ package designpatterns.structural.composition;
 
 public class Mammal implements Animal{
 
-  private String name;
+  private final String name;
 
   public Mammal(String name) {
     this.name = name;

@@ -2,7 +2,7 @@ package designpatterns.structural.composition;
 
 public class Bird implements Animal{
 
-  private String name;
+  private final String name;
 
   public Bird(String name) {
     this.name = name;
