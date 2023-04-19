@@ -1,4 +1,4 @@
-# Proxy design pattern
+# Proxy pattern
 
 Purpose : to hide the target object and provide same interface to the client
           to control for accessing the original object

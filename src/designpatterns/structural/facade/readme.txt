@@ -1,4 +1,4 @@
-# Adapter design pattern
+# Adapter pattern
 
 Purpose : to provide a simple interface by encapsulating a bunch of complex subsystem behaviors(single point of contact)
           to make subsystems easy to use

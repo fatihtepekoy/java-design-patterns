@@ -4,9 +4,9 @@ import java.awt.Color;
 
 public class TreeType {
 
-  private String name;
-  private Color color;
-  private String someOtherProperties = "max size, max age etc";
+  private final String name;
+  private final Color color;
+  private final String someOtherProperties = "max size, max age etc";
 
 
   public TreeType(String name, Color color) {

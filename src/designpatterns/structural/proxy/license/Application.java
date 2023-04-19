@@ -2,7 +2,7 @@ package designpatterns.structural.proxy.license;
 
 public class Application {
 
-  private LicenseService licenseService;
+  private final LicenseService licenseService;
 
   public Application(LicenseService licenseService) {
     this.licenseService = licenseService;

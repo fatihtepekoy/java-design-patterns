@@ -25,9 +25,9 @@ public class Forest extends JFrame {
 
   private void draw(Graphics g, Tree tree) {
     g.setColor(Color.BLACK);
-    g.fillRect(tree.getX() - 1, tree.getY(), 3, 5);
-    g.setColor(tree.getTreeType().getColor());
-    g.fillOval(tree.getX() - 5, tree.getY() - 10, 10, 10);
+    g.fillRect(tree.x() - 1, tree.y(), 3, 5);
+    g.setColor(tree.treeType().getColor());
+    g.fillOval(tree.x() - 5, tree.y() - 10, 10, 10);
   }
 
 

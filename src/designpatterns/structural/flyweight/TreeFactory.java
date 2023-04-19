@@ -6,14 +6,12 @@ import java.util.Map;
 
 public class TreeFactory {
 
-  static Map<String, TreeType> treeTypes = new HashMap<>();
+  private static final Map<String, TreeType> treeTypes = new HashMap<>();
+
+  public TreeFactory() {
+  }
 
   public static TreeType getTree(String name, Color color) {
-    TreeType treeType = treeTypes.get(name);
-    if (treeType == null) {
-      treeType = new TreeType(name, color);
-      treeTypes.put(name, treeType);
-    }
-    return treeType;
+    return treeTypes.computeIfAbsent(name, k -> new TreeType(name, color));
   }
 }

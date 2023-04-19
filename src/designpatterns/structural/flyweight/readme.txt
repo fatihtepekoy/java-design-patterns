@@ -1,4 +1,4 @@
-# Flyweight design pattern
+# Flyweight pattern
 
 Purpose : Use sharing to support large numbers of fine-grained objects efficiently to save memory. Main target is saving memory, not creating the required objects.
 Implementation : Create a factory class and keep the objects after created. Try to reuse as much objects as possible by sharing them

@@ -1,4 +1,4 @@
-# Adapter design pattern
+# Adapter pattern
 
 Purpose : to provide a bunch of objects in a composite object
           to allow especially same treating individual objects and compositions of objects

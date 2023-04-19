@@ -1,4 +1,4 @@
-# Factory design pattern
+# Factory pattern
 
 create a factory class to make it easy to create complex or high cost objects
 PS:

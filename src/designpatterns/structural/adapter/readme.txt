@@ -1,4 +1,4 @@
-# Adapter design pattern
+# Adapter pattern
 
 Purpose : to make it work two unrelated interfaces together.
           This pattern acts as a connector between two interfaces
