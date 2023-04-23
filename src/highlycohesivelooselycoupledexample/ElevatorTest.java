@@ -3,10 +3,10 @@ package highlycohesivelooselycoupledexample;
 
 public class ElevatorTest {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     System.out.println("==== 5 floor test ====");
-    FiveFloorSystemImpl fiveFloorSystemImpl = new FiveFloorSystemImpl();
+    IFloorSystem fiveFloorSystemImpl = new FiveFloorSystemImpl();
     BaseElevator elevatorForFiveFloors = new VisitorElevator(fiveFloorSystemImpl, 1000);
     elevatorForFiveFloors.openDoor(); // Get into the elevatorForFiveFloors
     elevatorForFiveFloors.closeDoor();
@@ -16,7 +16,7 @@ public class ElevatorTest {
     elevatorForFiveFloors.go(FiveFloorEnum.FIFTH);
 
     System.out.println("==== 3 floor test ====");
-    ThreeFloorSystemImpl threeFloorSystemImpl = new ThreeFloorSystemImpl();
+    IFloorSystem threeFloorSystemImpl = new ThreeFloorSystemImpl();
     BaseElevator elevatorForThreeFloors = new VisitorElevator(threeFloorSystemImpl, 750);
     elevatorForThreeFloors.openDoor(); // Somebody is coming :)
     elevatorForThreeFloors.go(ThreeFloorEnum.THIRD_FLOOR);

@@ -1,4 +1,4 @@
-package designpatterns.structural.composition;
+package designpatterns.structural.composite;
 
 public class ZooGardenTest {
 

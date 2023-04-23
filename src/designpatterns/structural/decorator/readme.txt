@@ -5,5 +5,5 @@ Purpose : to add more capability to the object without adding them to the class 
           to provide an enhanced interface
 
 PS:
- - Each decorator object wraps previous one, this is different than composition
+ - Each decorator object wraps previous one, this is different from composition
  -
