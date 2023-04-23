@@ -1,0 +1,17 @@
+package designpatterns.behavioral.observer;
+
+
+public class RadioNews implements Channel {
+
+    private String news;
+
+    @Override
+    public void update(Object news) {
+        System.out.println("Radio news = " + news);
+        setNews((String) news);
+    }
+
+    private void setNews(String news) {
+        this.news = news;
+    }
+}
