@@ -1,17 +1,40 @@
 package designpatterns.structural.bridge;
 
-public interface RemoteController {
+public abstract class RemoteController {
 
-  void turnOn();
+  protected Device device;
 
-  void turnOff();
+  protected RemoteController(Device device) {
+    this.device = device;
+  }
 
-  void volumeUp();
+  public Device getDevice() {
+    return device;
+  }
 
-  void volumeDown();
+  public void turnOn() {
+    device.turnOn();
+  }
 
-  void printDeviceName();
+  public void turnOff() {
+    device.turnOff();
+  }
 
-  void switchToDevice(Device device);
+  public void volumeUp() {
+    device.volumeUp();
+  }
+
+  public void volumeDown() {
+    device.volumeDown();
+  }
+
+  public void printDeviceName() {
+    device.getName();
+  }
+
+  public void switchToDevice(Device device){
+    System.out.println(device.getName() + " is set");
+    this.device = device;
+  }
 
 }

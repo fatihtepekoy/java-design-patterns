@@ -1,6 +1,8 @@
 # Proxy pattern
 
-Purpose : to protect child class from changes in parent class by putting a layer between child and parent class
+Purpose : to decouple the interfaces from implementation and hiding the implementation details from the client programs.
+          to decouple the interfaces from implementation
+
 
 PS:
  - In using of the inheritance, all public and protected methods causes coupling if child class does not override them, properties as well.
