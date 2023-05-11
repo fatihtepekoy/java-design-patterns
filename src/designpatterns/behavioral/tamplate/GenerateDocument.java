@@ -15,6 +15,21 @@ public abstract class GenerateDocument {
     this.path = path;
   }
 
+  // Algorithm Template is below -> client will implement the abstract methods
+  protected void createDocument(){
+    try {
+      reserveFileNameFromOS();
+      reserveMemory();
+      if(createTheFile())
+        log();
+      else
+        error();
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+
   protected abstract void reserveFileNameFromOS();
 
   protected abstract void reserveMemory();
@@ -32,17 +47,5 @@ public abstract class GenerateDocument {
     System.out.println("A problem occurred during file creation!!!");
   }
 
-  protected void createDocument(){
-    try {
-      reserveFileNameFromOS();
-      reserveMemory();
-      if(createTheFile())
-        log();
-      else
-        error();
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
-  }
 
 }

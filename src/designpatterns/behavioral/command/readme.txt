@@ -5,7 +5,7 @@ Purpose : - to encapsulate in an object all the data required for performing a g
 
 
 PS:
- - Create a factory class fot the commands
+ - Create a factory class for the commands
  - A request is wrapped under an object as command and passed to invoker object.
  - is used to implement loose coupling in a request-response model.
 

@@ -10,5 +10,5 @@ PS:
  - if you define a state(behaviour) for each station, it will be cleaner code
  - we have a state variable in the Object, we update the state if needed
  - State Pattern Context is the class that has a State reference to one of the concrete implementations of the State.
- - Context forwards the request to the state object for processing. Let’s understand this with a simple example.
+ - Context forwards the request to the state object for processing. 
 
