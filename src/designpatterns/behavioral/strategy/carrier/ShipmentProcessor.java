@@ -7,10 +7,10 @@ public class ShipmentProcessor implements ShipmentService {
   private HashMap<String, CarrierService> carrierServiceHashMap = new HashMap<>();
 
 
-  // postConstruct
+  // postConstruct from DB
   private void initCarriers(){
-    carrierServiceHashMap.put("ARAS", new ArasCarrierService());
-    carrierServiceHashMap.put("YURTICI", new YurticiCarrierService());
+    carrierServiceHashMap.put("FEDEX", new FedexCarrierService());
+    carrierServiceHashMap.put("UPS", new UpsCarrierService());
   }
 
   private void createShipment(CarrierService carrierService, UniversalShipmentDto universalShipmentDto) {
