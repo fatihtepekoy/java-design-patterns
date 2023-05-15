@@ -2,7 +2,7 @@
 
 - **Patterns**
 
-![Patterns](https://github.com/fatihtepekoy/java-design-patterns/resources/patterns.jpeg)
+![Patterns](https://github.com/fatihtepekoy/java-design-patterns/blob/master/resources/patterns.png)
 
 
 
