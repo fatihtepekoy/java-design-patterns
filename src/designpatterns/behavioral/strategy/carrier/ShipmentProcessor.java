@@ -8,7 +8,7 @@ public class ShipmentProcessor implements ShipmentService {
 
 
   // postConstruct from DB
-  private void initCarriers(){
+  private void initCarriers() {
     carrierServiceHashMap.put("FEDEX", new FedexCarrierService());
     carrierServiceHashMap.put("UPS", new UpsCarrierService());
   }
@@ -22,4 +22,5 @@ public class ShipmentProcessor implements ShipmentService {
     CarrierService carrierService = carrierServiceHashMap.get(shipmentDto.getCarrier());
     createShipment(carrierService, shipmentDto);
   }
+
 }
