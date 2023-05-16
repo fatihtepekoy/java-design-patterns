@@ -28,12 +28,12 @@ public abstract class RemoteController {
     device.volumeDown();
   }
 
-  public void printDeviceName() {
-    device.getName();
+  public String printDeviceName() {
+    return device.getName();
   }
 
-  public void switchToDevice(Device device){
-    System.out.println(device.getName() + " is set");
+  public void switchToDevice(Device device) {
+    System.out.println(printDeviceName() + " is set");
     this.device = device;
   }
 

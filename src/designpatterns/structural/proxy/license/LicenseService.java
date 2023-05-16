@@ -2,6 +2,6 @@ package designpatterns.structural.proxy.license;
 
 public interface LicenseService {
 
-  boolean getLicense();
+  License getLicense() throws Exception;
 
 }

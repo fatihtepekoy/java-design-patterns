@@ -11,13 +11,12 @@ public class LicenseProxyServer implements LicenseService {
   }
 
   @Override
-  public boolean getLicense() {
+  public License getLicense() throws Exception {
     if (availableLicenseCount > 0) {
-      if (licenseProvider.getLicense()) {
-        availableLicenseCount--;
-        return true;
-      }
+      availableLicenseCount--;
+      return licenseProvider.getLicense();
     }
-    return false;
+    throw new Exception("License exhausted");
   }
+
 }
